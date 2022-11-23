@@ -13,6 +13,13 @@ header {
   z-index: 100;
   transition: ease-out;
 
+  .bg-stripe {
+    background: url("../../assets/image/bg-stripe.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
   .first-meetup {
     background-color: #f20487;
     transform: translateY(8px);

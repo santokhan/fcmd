@@ -10,6 +10,11 @@ header {
   background: linear-gradient(180deg, #8717bb 0%, #33029f 100%);
   z-index: 100;
   transition: ease-out; }
+  header .bg-stripe {
+    background: url("../../assets/image/bg-stripe.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
   header .first-meetup {
     background-color: #f20487;
     transform: translateY(8px); }
