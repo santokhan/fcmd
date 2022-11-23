@@ -9,10 +9,6 @@ header {
   z-index: 100;
   transition: ease-out;
 
-  .bg-gradient-purple-to-blue {
-    background: linear-gradient(180deg, #8717bb 0%, #33029f 100%);
-  }
-
   .first-meetup {
     background-color: #f20487;
     transform: translateY(8px);
@@ -25,38 +21,39 @@ header {
 
   .map {
     position: absolute;
-    right: 40%;
-    top: 110px;
+    right: calc(50vw - 200px);
+    top: 80px;
     z-index: -240;
-  }
-  .freelancer-meetup {
-    .ticket-link {
-      background-color: #fd9113;
-      font-weight: 500;
-    }
   }
 
   .tower {
     position: absolute;
     bottom: 0px;
-    height: 90%;
+    height: 75%;
     left: 50vw;
     z-index: -110;
   }
 
   .freelancer-meetup {
-    padding: 12rem 0 0 0;
+    padding: 6rem 1rem 0 1rem;
     z-index: 1;
 
     .left {
       max-width: 710px;
     }
 
-    .text {
+    .banner-title {
       line-height: 1;
-      font-size: 106px;
+      font-size: 56px;
       font-weight: 700;
       text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+      z-index: 100;
+      margin-bottom: 2rem;
+    }
+
+    .ticket-link {
+      background-color: #fd9113;
+      font-weight: 500;
     }
   }
 
@@ -90,10 +87,6 @@ header {
     z-index: 500;
   }
 
-  .text-xl {
-    font-size: 20px;
-  }
-
   .ellipse-1 {
     position: absolute;
     width: 140px;
@@ -103,6 +96,7 @@ header {
     background: linear-gradient(180deg, #ff9822 0%, rgba(74, 23, 187, 0) 100%);
     opacity: 0.5;
     border-radius: 104px;
+    z-index: -11;
   }
 
   .capsule-1 {
@@ -117,6 +111,7 @@ header {
       rgba(74, 23, 187, 0.85) 100%
     );
     border-radius: 50px;
+    z-index: -105;
   }
 
   .capsule-2 {
@@ -127,6 +122,7 @@ header {
     top: 720px;
     background: linear-gradient(180deg, #811fe3 0%, rgba(74, 23, 187, 0) 100%);
     border-radius: 76px 76px 0 0;
+    z-index: -105;
   }
 
   .countdown {
@@ -137,6 +133,7 @@ header {
 
     .inside {
       background: rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(6px);
       padding: 1rem 2.5rem;
     }
 
@@ -151,7 +148,48 @@ header {
     }
   }
 
+  // Global
+  .bg-gradient-purple-to-blue {
+    background: linear-gradient(180deg, #8717bb 0%, #33029f 100%);
+  }
+  .text-xl {
+    font-size: 20px;
+  }
   .opacity-text {
     opacity: 0.6;
+  }
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 576px) {
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) {
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) {
+}
+
+/* Large desktops and laptops */
+@media (min-width: 1170px) {
+  header {
+    .freelancer-meetup {
+      padding: 12rem 0 0 0;
+      z-index: 1;
+
+      .left {
+        max-width: 710px;
+      }
+
+      .banner-title {
+        line-height: 1;
+        font-size: 106px;
+        font-weight: 700;
+        text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+        margin-bottom: 2rem;
+      }
+    }
   }
 }
