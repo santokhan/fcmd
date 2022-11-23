@@ -36,27 +36,66 @@ const App = {
       }
     }, 1000);
   },
-  mapParallaxEffect() {
+  mapParallaxEffect(props) {
+    let { w, h, mouseX, mouseY } = props;
+
     const elem = document.querySelector("header #map");
     document.addEventListener("mousemove", (e) => {
-      let w = window.innerWidth / 2;
-      let h = window.innerHeight / 2;
-      let mouseX = e.clientX;
-      let mouseY = e.clientY;
+      // let w = window.innerWidth / 2;
+      // let h = window.innerHeight / 2;
+      // let mouseX = e.clientX;
+      // let mouseY = e.clientY;
       // let depth1 = `${50 - (mouseX - w) * 0.01} ${50 - (mouseY - h) * 0.01}`;
       let xAxis = 50 - (mouseX - w) * 0.03;
       let yAxis = 50 - (mouseY - h) * 0.05;
       // let depth3 = `${50 - (mouseX - w) * 0.06} ${50 - (mouseY - h) * 0.06}`;
       console.log({ xAxis, yAxis });
       // elem.style.backgroundPosition = x;
-      elem.style.transiton = "ease-out";
       elem.style.transform = `translateX(${xAxis}px) translateY(${yAxis}px)`;
     });
+  },
+  ellipseParallaxEffect(props) {
+    let { w, h, mouseX, mouseY } = props;
+
+    const elem = document.querySelector("header #ellipse");
+
+    let xAxis = 50 - (mouseX - w) * 0.02;
+    let yAxis = 50 - (mouseY - h) * 0.03;
+    elem.style.transform = `translateX(${yAxis}px) translateY(${xAxis}px)`;
+  },
+  rectangleTopParallaxEffect(props) {
+    let { w, h, mouseX, mouseY } = props;
+
+    const elem = document.querySelector("#rectangleTop");
+
+    let xAxis = 50 - (mouseX - w) * 0.03;
+    let yAxis = 50 - (mouseY - h) * 0.03;
+    elem.style.transform = `translateX(-${yAxis}px) translateY(${xAxis}px)`;
+  },
+  rectangleBottomParallaxEffect(props) {
+    let { w, h, mouseX, mouseY } = props;
+
+    const elem = document.querySelector("#rectangleBottom");
+
+    let xAxis = 50 - (mouseX - w) * 0.02;
+    let yAxis = 50 - (mouseY - h) * 0.04;
+    elem.style.transform = `translateX(-${xAxis}px) translateY(${yAxis}px)`;
   },
 };
 
 window.onload = () => {
   App.showHideDropdown();
   App.countDownTimer();
-  App.mapParallaxEffect();
+  document.addEventListener("mousemove", (e) => {
+    let w = window.innerWidth / 2;
+    let h = window.innerHeight / 2;
+    let mouseX = e.clientX;
+    let mouseY = e.clientY;
+    const obj = { w, h, mouseX, mouseY };
+
+    App.mapParallaxEffect(obj);
+    App.ellipseParallaxEffect(obj);
+    App.rectangleTopParallaxEffect(obj);
+    App.rectangleBottomParallaxEffect(obj);
+  });
 };

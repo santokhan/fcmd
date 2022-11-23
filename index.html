@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>FCMD</title>
@@ -22,9 +21,9 @@
 <body>
   <header class="header position-relative" id="header">
     <div class="position-relative">
-      <div class="ellipse-1"></div>
-      <div class="capsule-1"></div>
-      <div class="capsule-2"></div>
+      <div class="ellipse-1" id="ellipse"></div>
+      <div class="capsule-1" id="rectangleTop"></div>
+      <div class="capsule-2" id="rectangleBottom"></div>
     </div>
 
     <div>
@@ -35,20 +34,20 @@
               <div class="logo">
                 <img src="./assets/image/logo-main.png" alt="logo" width="112" />
               </div>
-              <div class="mx-2 px-2 py-2 bg-danger h6 rounded-pill" style="background-color: #f20487; transform: translateY(8px)">
+              <div class="mx-2 px-2 py-2 bg-danger h6 rounded-pill first-meetup">
                 1st meetup
               </div>
             </div>
             <div class="d-none d-xl-block">
               <nav class="d-flex">
-                <div class="px-3 mx-1">
-                  <a href="#" class="text-white text-decoration-none tw-text-xl">About us</a>
+                <div class="px-3 mx-1 nav-item-f">
+                  <a href="#" class="text-white text-decoration-none tw-text-xl nav-link-f">About us</a>
                 </div>
-                <div class="px-3 mx-1">
-                  <a href="#" class="text-white text-decoration-none tw-text-xl">Speakers</a>
+                <div class="px-3 mx-1 nav-item-f">
+                  <a href="#" class="text-white text-decoration-none tw-text-xl nav-link-f">Speakers</a>
                 </div>
-                <div class="px-3 mx-1">
-                  <a href="#" class="text-white text-decoration-none tw-text-xl">Schedule</a>
+                <div class="px-3 mx-1 nav-item-f">
+                  <a href="#" class="text-white text-decoration-none tw-text-xl nav-link-f">Schedule</a>
                 </div>
               </nav>
             </div>
@@ -101,10 +100,10 @@
                 <div class="tw-text-2xl">Joynul Abedin Park, Mymensingh</div>
               </div>
             </div>
-            <div class="text-center text-white py-3 tw-bg-[#FD9113] tw-font-semibold">
+            <a href="#" class="d-block text-center text-white py-3 tw-bg-[#FD9113] tw-font-semibold">
               <span>COLLECT YOUR TICKET NOW</span>
               <i class="fa fa-angle-right" aria-hidden="true"></i>
-            </div>
+            </a>
           </div>
         </div>
       </div>

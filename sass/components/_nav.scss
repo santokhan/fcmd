@@ -1,0 +1,11 @@
+nav {
+  .nav-item-f {
+    .nav-link-f {
+      position: inherit;
+    }
+    &:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 3px;
+    }
+  }
+}

@@ -1,3 +1,4 @@
-/node_modules
-/assets/css/style.css
-style.css
+node_modules
+*.md
+*.txt
+parallax-master
