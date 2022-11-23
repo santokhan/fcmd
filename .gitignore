@@ -2,3 +2,5 @@ node_modules
 *.md
 *.txt
 parallax-master
+tw.css
+tailwind.config.js
