@@ -3,18 +3,13 @@ html,
 body {
   font-family: "Asap", sans-serif; }
 
-.bg-gradient-purple-to-blue {
-  background: linear-gradient(180deg, #8717bb 0%, #33029f 100%); }
-
 header {
-  background: linear-gradient(180deg, #8717bb 0%, #33029f 100%);
+  background: url("../../assets/image/bg-header.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   z-index: 100;
   transition: ease-out; }
-  header .bg-stripe {
-    background: url("../../assets/image/bg-stripe.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center; }
   header .first-meetup {
     background-color: #f20487;
     transform: translateY(8px); }
@@ -58,11 +53,18 @@ header {
     border-radius: 0.5rem;
     color: #111; }
   header .biggest-freelancer {
-    width: 370px;
-    background: #6f2dfa; }
+    width: 370px; }
     header .biggest-freelancer .top {
       font-size: 30px;
-      background: linear-gradient(90deg, #00b18b, #0297ee); }
+      background: linear-gradient(90deg, #00b18b, #0297ee);
+      position: relative; }
+      header .biggest-freelancer .top .mask-1 {
+        position: absolute;
+        bottom: -31.1px;
+        left: 0;
+        width: 100%; }
+    header .biggest-freelancer .bottom {
+      margin-top: 22.2px; }
     header .biggest-freelancer .title {
       opacity: 0.6; }
     header .biggest-freelancer .des {
@@ -135,6 +137,12 @@ header {
       font-weight: 700;
       text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
       margin-bottom: 2rem; } }
+
+.bg-gradient-purple-to-blue {
+  background: linear-gradient(180deg, #8717bb 0%, #33029f 100%); }
+
+.bg-purple {
+  background: #6f2dfa; }
 
 nav .nav-item-f .nav-link-f {
   position: inherit;
