@@ -1,0 +1,19 @@
+@import "./components/_header";
+
+header {
+  .header {
+    position: relative;
+
+    .section {
+      position: inherit;
+    }
+  }
+  .footer {
+    position: relative;
+
+    .section-1 {
+      position: inherit;
+      display: block;
+    }
+  }
+}

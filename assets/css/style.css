@@ -3,6 +3,10 @@ header.header {
     z-index: 100;
 }
 
+.bg-gradient-purple-to-blue {
+    background: linear-gradient(180deg, #8717bb 0%, #33029f 100%);
+}
+
 .container {
     max-width: 1170px !important;
     margin: 0 auto;
