@@ -12,43 +12,51 @@ const App = {
       });
   },
   countDownTimer() {
-    // Set the date we're counting down to
-    var countDownDate = new Date("Dec 9, 2022 15:37:25").getTime();
+    let countDownDate = new Date("Dec 9, 2022 15:37:25").getTime();
 
-    // Update the count down every 1 second
-    var x = setInterval(function () {
-      // Get today's date and time
-      var now = new Date().getTime();
+    let x = setInterval(function () {
+      let now = new Date().getTime();
+      let distance = countDownDate - now;
 
-      // Find the distance between now and the count down date
-      var distance = countDownDate - now;
-
-      // Time calculations for days, hours, minutes and seconds
-      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      var hours = Math.floor(
+      let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      let hours = Math.floor(
         (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
       );
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      // Display the result in the element with id="demo"
-      // document.getElementById("demo").innerHTML =
-      //   days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
       document.querySelector("header #days").innerHTML = days;
       document.querySelector("header #hours").innerHTML = hours;
       document.querySelector("header #minutes").innerHTML = minutes;
       document.querySelector("header #seconds").innerHTML = seconds;
 
-      // If the count down is finished, write some text
       if (distance < 0) {
         clearInterval(x);
         document.getElementById("demo").innerHTML = "EXPIRED";
       }
     }, 1000);
   },
+  mapParallaxEffect() {
+    const elem = document.querySelector("header #map");
+    document.addEventListener("mousemove", (e) => {
+      let w = window.innerWidth / 2;
+      let h = window.innerHeight / 2;
+      let mouseX = e.clientX;
+      let mouseY = e.clientY;
+      // let depth1 = `${50 - (mouseX - w) * 0.01} ${50 - (mouseY - h) * 0.01}`;
+      let xAxis = 50 - (mouseX - w) * 0.03;
+      let yAxis = 50 - (mouseY - h) * 0.05;
+      // let depth3 = `${50 - (mouseX - w) * 0.06} ${50 - (mouseY - h) * 0.06}`;
+      console.log({ xAxis, yAxis });
+      // elem.style.backgroundPosition = x;
+      elem.style.transiton = "ease-out";
+      elem.style.transform = `translateX(${xAxis}px) translateY(${yAxis}px)`;
+    });
+  },
 };
 
 window.onload = () => {
   App.showHideDropdown();
   App.countDownTimer();
+  App.mapParallaxEffect();
 };
