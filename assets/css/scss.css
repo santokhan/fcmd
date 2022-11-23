@@ -3,6 +3,9 @@ html,
 body {
   font-family: "Asap", sans-serif; }
 
+.bg-gradient-purple-to-blue {
+  background: linear-gradient(180deg, #8717bb 0%, #33029f 100%); }
+
 header {
   background: linear-gradient(180deg, #8717bb 0%, #33029f 100%);
   z-index: 100;
@@ -42,9 +45,12 @@ header {
   header .dropdown-menu {
     position: absolute;
     right: 0;
-    top: 2rem;
-    background: white;
-    padding: 1rem 1.5rem;
+    top: 3rem;
+    width: 200px;
+    background: linear-gradient(45deg, #8717bb 0%, #33029f 100%);
+    backdrop-filter: blur(6px);
+    padding: 1.25rem 0.5rem;
+    border-radius: 0.5rem;
     color: #111; }
   header .biggest-freelancer {
     width: 370px;
@@ -103,8 +109,6 @@ header {
       top: 0;
       border: 2px dashed rgba(34, 255, 202, 0.7);
       transform: translateY(-50%); }
-  header .bg-gradient-purple-to-blue {
-    background: linear-gradient(180deg, #8717bb 0%, #33029f 100%); }
   header .text-xl {
     font-size: 20px; }
   header .opacity-text {
@@ -129,7 +133,8 @@ header {
 
 nav .nav-item-f .nav-link-f {
   position: inherit;
-  font-size: 1.25rem; }
+  font-size: 1.25rem;
+  text-decoration: none; }
 
 nav .nav-item-f:hover {
   text-decoration: underline;
