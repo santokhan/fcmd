@@ -10,12 +10,26 @@ header {
   background-position: center;
   z-index: 100;
   transition: ease-out; }
-  header .first-meetup {
-    background-color: #f20487;
-    transform: translateY(8px); }
-  header .container {
-    max-width: 1170px !important;
-    margin: 0 auto; }
+  header .topbar {
+    z-index: 500; }
+    header .topbar .logo {
+      width: 6rem;
+      height: 3.25rem; }
+    header .topbar .first-meetup {
+      background-color: #f20487;
+      transform: translateY(8px); }
+    header .topbar .dropdown-menu {
+      position: absolute;
+      right: 0;
+      top: 3rem;
+      width: 200px;
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(6px);
+      padding: 0;
+      border-radius: 0.5rem;
+      color: #111; }
+      header .topbar .dropdown-menu .nav-link-f:hover {
+        color: #5622c7; }
   header .map {
     position: absolute;
     right: calc(50vw - 200px);
@@ -24,8 +38,8 @@ header {
   header .tower {
     position: absolute;
     bottom: 0px;
-    height: 75%;
-    left: 50vw;
+    height: 60%;
+    right: 10vw;
     z-index: -110; }
   header .freelancer-meetup {
     padding: 6rem 1rem 0 1rem;
@@ -59,18 +73,6 @@ header {
       opacity: 0.6; }
     header .biggest-freelancer .des {
       font-size: 1.5rem; }
-  header .topbar {
-    z-index: 500; }
-    header .topbar .dropdown-menu {
-      position: absolute;
-      right: 0;
-      top: 3rem;
-      width: 200px;
-      background: linear-gradient(45deg, #8717bb 0%, #33029f 100%);
-      backdrop-filter: blur(6px);
-      padding: 1.25rem 0.5rem;
-      border-radius: 0.5rem;
-      color: #111; }
   header .ellipse-1 {
     position: absolute;
     width: 140px;
@@ -104,13 +106,15 @@ header {
     object-fit: contain;
     position: absolute;
     right: 0;
-    top: 0; }
+    top: 0;
+    z-index: -20; }
   header .rectangle-bottom {
     width: 260px;
     object-fit: contain;
     position: absolute;
     bottom: 0;
-    left: 0; }
+    left: 0;
+    z-index: -20; }
   header .countdown {
     background-image: url("../image/bg-1.png");
     background-repeat: no-repeat;
@@ -140,6 +144,9 @@ header {
 /* Landscape tablets and medium desktops */
 /* Large desktops and laptops */
 @media (min-width: 1170px) {
+  header .topbar .logo {
+    width: 6rem;
+    height: 3.25rem; }
   header .freelancer-meetup {
     padding: 12rem 0 0 0;
     z-index: 1; }
@@ -150,7 +157,13 @@ header {
       font-size: 106px;
       font-weight: 700;
       text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
-      margin-bottom: 2rem; } }
+      margin-bottom: 2rem; }
+  header .tower {
+    position: absolute;
+    bottom: 0px;
+    height: 75%;
+    left: 50vw;
+    z-index: -110; } }
 
 .text-purple {
   color: #280e62; }
@@ -232,6 +245,33 @@ header {
   max-width: 1170px;
   margin: 0 auto; }
 
+.opacity-25 {
+  opacity: 0.25; }
+
+.opacity-50 {
+  opacity: 0.5; }
+
+.opacity-75 {
+  opacity: 0.75; }
+
+.opacity-80 {
+  opacity: 0.8; }
+
+.opacity-90 {
+  opacity: 0.9; }
+
+.opacity-95 {
+  opacity: 0.95; }
+
+.hidden {
+  display: none; }
+
+.overflow-x-hidden {
+  overflow-x: hidden; }
+
+.w-full {
+  width: 100%; }
+
 nav .nav-item-f .nav-link-f {
   position: inherit;
   font-size: 1.25rem;
@@ -261,10 +301,62 @@ main .about {
       outline: 0;
       box-shadow: 0 0 0 0.25rem rgba(42, 7, 249, 0.05); }
 
-@media (min-width: 1200px) {
-  main .book-seat {
-    background: #ff9822;
-    padding: 0.75rem 1.75rem !important; } }
+main .portfolio {
+  background: url("../../assets/image/bg-about.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  main .portfolio .text-top {
+    z-index: 600; }
+  main .portfolio .curve {
+    position: absolute;
+    z-index: -10;
+    width: 100%;
+    left: 100%;
+    bottom: -4px;
+    transform: translateX(-100%); }
+  main .portfolio .portfolio-card {
+    border-radius: 1rem;
+    background-color: #4a17bb;
+    background-image: url("../../assets/image/bg-speaker-card.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+    main .portfolio .portfolio-card .image-box {
+      border-radius: 0 6rem 6rem 0;
+      background: linear-gradient(90deg, #27c1e3 0%, #744bcc 45.46%); }
+      main .portfolio .portfolio-card .image-box .profile {
+        width: 120px;
+        height: 120px;
+        box-shadow: 0 8px 8px rgba(86, 23, 187, 0.5); }
+    main .portfolio .portfolio-card .speaker-badge {
+      background: linear-gradient(90deg, #3cf1fc 0%, rgba(86, 23, 187, 0) 100%);
+      border-radius: 1000px; }
+    main .portfolio .portfolio-card .speaker-footer-logo {
+      position: absolute;
+      right: 0.75rem;
+      bottom: 1.25rem;
+      width: 4rem;
+      height: 1.5rem; }
+
+@media (min-width: 992px) {
+  main .portfolio .portfolio-card .image-box .profile {
+    width: 10rem;
+    height: 10rem; }
+  main .portfolio .portfolio-card .speaker-footer-logo {
+    right: 1rem;
+    bottom: 1.5rem;
+    width: 5rem;
+    height: 2rem; } }
+
+main .time {
+  background: url("../../assets/image/bg-time.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+main .text-sky {
+  color: #00fcfa; }
 
 main .speakers .curve {
   position: absolute;
@@ -292,3 +384,9 @@ main .speakers .book-seat {
   main .book-seat {
     background: #ff9822;
     padding: 0.75rem 1.75rem !important; } }
+
+.footer {
+  background: linear-gradient(180deg, #8717bb 0%, #33029f 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }

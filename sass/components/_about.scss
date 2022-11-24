@@ -42,18 +42,6 @@ main {
 
 // X-Large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-  main {
-    .speech-container {
-      .speech-card {
-        .divider {
-        }
-      }
-    }
-    .book-seat {
-      background: #ff9822;
-      padding: 0.75rem 1.75rem !important;
-    }
-  }
 }
 
 // XX-Large devices (larger desktops, 1400px and up)
