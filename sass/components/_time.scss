@@ -4,6 +4,16 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    .book-seat {
+      background: #ff9822;
+      padding: 0.5rem 1.5rem !important;
+
+      &:focus {
+        outline: 0;
+        box-shadow: 0 0 0 0.25rem rgba(255, 152, 34, 0.25);
+      }
+    }
   }
   .text-sky {
     color: #00fcfa;
