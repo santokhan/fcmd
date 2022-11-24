@@ -95,7 +95,7 @@ window.onload = () => {
 
     App.mapParallaxEffect(obj);
     App.ellipseParallaxEffect(obj);
-    App.rectangleTopParallaxEffect(obj);
-    App.rectangleBottomParallaxEffect(obj);
+    // App.rectangleTopParallaxEffect(obj);
+    // App.rectangleBottomParallaxEffect(obj);
   });
 };
