@@ -158,6 +158,8 @@ header {
   }
   .countdown {
     background-image: url("../image/bg-1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 1.25rem 1.25rem;
     transform: translateY(50%);
     position: relative;
