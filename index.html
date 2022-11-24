@@ -16,14 +16,12 @@
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./assets/css/scss.css" />
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <!-- Splider CSS -->
-  <!-- Link to the file hosted on your server, -->
-  <link rel="stylesheet" href="./assets/js/splide-4.1.3/dist/css/splide.min.css">
-  <link rel="stylesheet" href="./assets/js/splide-4.1.3/dist/css/splide-core.min.css">
-  <link rel="stylesheet" href="./assets/js/splide-4.1.3/dist/css/themes/splide-default.min.css">
+  <!-- Owl -->
+  <link rel="stylesheet" href="assets/OwlCarousel/dist/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="assets/OwlCarousel/dist/assets/owl.theme.default.min.css">
 </head>
 
-<body>
+<body class="overflow-x-hidden">
   <header class="header position-relative" id="header">
     <div class="bg-stripe">
       <div class="position-relative">
@@ -199,22 +197,52 @@
           </div>
         </div>
 
-        <!-- Splider JS Slider -->
-        <section class="splide" aria-label="Splide Basic HTML Example">
-          <div class="splide__track">
-            <ul class="splide__list">
-              <li class="splide__slide">
-                <div class="text-black">Slide 01</div>
-              </li>
-              <li class="splide__slide">
-                <div class="text-black">Slide 02</div>
-              </li>
-              <li class="splide__slide">
-                <div class="text-black">Slide 03</div>
-              </li>
-            </ul>
+        <div class="owl-carousel owl-theme owl-loaded owl-drag" id="owl-carousel">
+          <div class="owl-stage-outer">
+            <div class="owl-stage overflow-x-auto" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 2376px;">
+              <div class="owl-item active" style="width: 178px; margin-right: 20px;">
+                <div class="px-4 py-2 border">
+                  <img width="100%" class="object-contain" src="assets/image/profie-1.png" alt="slider">
+                </div>
+              </div>
+              <div class="owl-item active" style="width: 178px; margin-right: 20px;">
+                <div class="px-4 py-2 border">
+                  <img width="100%" class="object-contain" src="assets/image/profie-1.png" alt="slider">
+                </div>
+              </div>
+              <div class="owl-item active" style="width: 178px; margin-right: 20px;">
+                <div class="px-4 py-2 border">
+                  <img width="100%" class="object-contain" src="assets/image/profie-1.png" alt="slider">
+                </div>
+              </div>
+              <div class="owl-item active" style="width: 178px; margin-right: 20px;">
+                <div class="px-4 py-2 border">
+                  <img width="100%" class="object-contain" src="assets/image/profie-1.png" alt="slider">
+                </div>
+              </div>
+              <div class="owl-item active" style="width: 178px; margin-right: 20px;">
+                <div class="px-4 py-2 border">
+                  <img width="100%" class="object-contain" src="assets/image/profie-1.png" alt="slider">
+                </div>
+              </div>
+              <div class="owl-item" style="width: 178px; margin-right: 20px;">
+                <div class="px-4 py-2 border">
+                  <img width="100%" class="object-contain" src="assets/image/profie-1.png" alt="slider">
+                </div>
+              </div>
+              <div class="owl-item" style="width: 178px; margin-right: 20px;">
+                <div class="px-4 py-2 border">
+                  <img width="100%" class="object-contain" src="assets/image/profie-1.png" alt="slider">
+                </div>
+              </div>
+              <div class="owl-item" style="width: 178px; margin-right: 20px;">
+                <div class="px-4 py-2 border">
+                  <img width="100%" class="object-contain" src="assets/image/profie-1.png" alt="slider">
+                </div>
+              </div>
+            </div>
           </div>
-        </section>
+        </div>
       </div>
     </section>
 
@@ -506,7 +534,7 @@
     <div class="py-3 py-lg-4">
       <div class="container">
         <div class="d-flex justify-content-center align-items-center mb-3 mb-lg-4"><img class=" object-contain" width="120" height="100" src="./assets/image/logo-main.png" alt="footer logo"></div>
-        <div class="d-flex justify-content-center flex-wrap">
+        <div class="d-flex justify-content-center flex-wrap fs-5">
           <a class="px-4 py-2 d-flex align-items-center gap-2 text-decoration-none link-light"><i class="fab fa-facebook" aria-hidden="true"></i>Jamalpur</a>
           <a class="px-4 py-2 d-flex align-items-center gap-2 text-decoration-none link-light"><i class="fab fa-facebook" aria-hidden="true"></i>Jamalpur</a>
           <a class="px-4 py-2 d-flex align-items-center gap-2 text-decoration-none link-light"><i class="fab fa-facebook" aria-hidden="true"></i>Jamalpur</a>
@@ -521,16 +549,44 @@
     </div>
   </footer>
 
-  <!-- Option 1: Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-  <!-- Option 2: Separate Popper and Bootstrap JS -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> -->
+  <!-- Owl -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="assets/OwlCarousel/dist/owl.carousel.min.js"></script>
+  <noscript>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script> -->
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> -->
+    <!-- Splider JS -->
+    <script src="./assets/js/splide-4.1.3/dist/js/splide.min.js" defer></script>
+    <script src="./assets/js/splide-4.1.3/dist/js/splide.min.js.map" defer></script>
+  </noscript>
+  <script>
+    $('#owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 1,
+          nav: true
+        },
+        600: {
+          items: 3,
+          nav: false
+        },
+        1000: {
+          items: 4,
+          nav: true,
+          loop: false
+        }
+      }
+    })
+    console.clear()
+  </script>
   <script src="./assets/js/app.js" defer></script>
-  <!-- Splider JS -->
-  <script src="./assets/js/splide-4.1.3/dist/js/splide.min.js" defer></script>
-  <script src="./assets/js/splide-4.1.3/dist/js/splide.min.js.map" defer></script>
 </body>
 
 </html>
