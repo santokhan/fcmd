@@ -1,5 +1,10 @@
 main {
   .about {
+    background: url("../../assets/image/bg-about.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
     .text-top {
       z-index: 600;
     }

@@ -241,22 +241,25 @@ nav .nav-item-f:hover {
   text-decoration: underline;
   text-decoration-thickness: 3px; }
 
-main .about .text-top {
-  z-index: 600; }
-
-main .about .curve {
-  position: absolute;
-  z-index: -10;
-  width: 100%;
-  left: 100%;
-  bottom: -4px;
-  transform: translateX(-100%); }
-
-main .about .light-purple {
-  background: rgba(42, 7, 249, 0.1) !important; }
-  main .about .light-purple:focus {
-    outline: 0;
-    box-shadow: 0 0 0 0.25rem rgba(42, 7, 249, 0.05); }
+main .about {
+  background: url("../../assets/image/bg-about.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  main .about .text-top {
+    z-index: 600; }
+  main .about .curve {
+    position: absolute;
+    z-index: -10;
+    width: 100%;
+    left: 100%;
+    bottom: -4px;
+    transform: translateX(-100%); }
+  main .about .light-purple {
+    background: rgba(42, 7, 249, 0.1) !important; }
+    main .about .light-purple:focus {
+      outline: 0;
+      box-shadow: 0 0 0 0.25rem rgba(42, 7, 249, 0.05); }
 
 @media (min-width: 1200px) {
   main .book-seat {
